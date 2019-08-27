@@ -18,12 +18,12 @@ export class AppComponent {
   nombre:string = '';
 
   paises:any = [
-    {activo: true, nombre: 'Colombia'},
-    {activo: false, nombre: 'Brasil'},
-    {activo: true, nombre: 'Argentina'},
-    {activo: false, nombre: 'Polonia'},
-    {activo: true, nombre: 'Alemania'},
-    {activo: true, nombre: 'Francia'},
+    {cercano:1, activo: true, nombre: 'Colombia'},
+    {cercano:2, activo: false, nombre: 'Brasil'},
+    {cercano:2, activo: true, nombre: 'Argentina'},
+    {cercano:3, activo: false, nombre: 'Polonia'},
+    {cercano:3, activo: true, nombre: 'Alemania'},
+    {cercano:3, activo: true, nombre: 'Francia'},
   ]
 
 

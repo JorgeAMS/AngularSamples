@@ -15,18 +15,15 @@
   <p>Nombre: {{ nombre }}</p>
   <br>
   <img width="200" alt="AMS Logo" src="https://www.leonhunter.com/wp-content/uploads/2018/06/Reglas-ortograficas-la-g-y-la-j.jpg">
-  <div>
+  <div class="listas">
     <ul>
-      <li *ngFor="let pais of paises">{{pais.nombre}}</li>    
-    </ul>
-    <ul>
-      <ng-container *ngFor="let pais of paises">
-        <li *ngIf="pais.activo">{{pais.nombre}}</li>
-      </ng-container>
-    </ul>
-    <ul>
-      <ng-container *ngFor="let pais of paises">
-        <li [ngStyle]="{color: (pais.activo) ? 'black' : 'red'}">{{pais.nombre}}</li>
+      <ng-container *ngFor="let pais of paises; let i = index">
+        <li [ngStyle]="{color: (pais.activo) ? 'black' : 'red'}"
+            [ngClass]="{colorsitos: (i + 1) % 2 !=0}"
+            [ngSwitch]="pais.cercano">{{pais.nombre}} - 
+            <span *ngSwitchCase=1>Cerca</span>
+            <span *ngSwitchCase=2>No tan cerca</span>
+            <span *ngSwitchCase=3>Llegando a Suba</span></li>
       </ng-container>
     </ul>
   </div>

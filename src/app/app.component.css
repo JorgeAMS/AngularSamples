@@ -10,4 +10,18 @@ h1{
 
 agm-map {
     height: 300px;
-  }
+}
+
+li{
+    margin: auto;
+}
+
+.colorsitos{
+    background-color: rgb(150, 127, 255);
+    color: white !important;
+}
+
+.listas{
+    width: 30%;
+    margin: auto;
+}
