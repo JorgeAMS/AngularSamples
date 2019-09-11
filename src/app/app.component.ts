@@ -2,6 +2,7 @@
 
 
 import { Component } from '@angular/core';
+import { AmsService } from '../app/ams.service';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ export class AppComponent {
   ]
 
 
-  constructor(){
+  constructor(private amsService: AmsService){
     this.cons();
   }
 
